@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A6C444193F004575BD5655 /* Pods_Pizza_Job_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52700D750D7CE443F539488B /* Pods_Pizza_Job_.framework */; };
 		AE79D7AA2729A9EA00E5C4A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D7A92729A9EA00E5C4A1 /* AppDelegate.swift */; };
 		AE79D7AC2729A9EA00E5C4A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D7AB2729A9EA00E5C4A1 /* SceneDelegate.swift */; };
 		AE79D7AE2729A9EA00E5C4A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D7AD2729A9EA00E5C4A1 /* ViewController.swift */; };
 		AE79D7B12729A9EA00E5C4A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE79D7AF2729A9EA00E5C4A1 /* Main.storyboard */; };
 		AE79D7B32729A9EC00E5C4A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE79D7B22729A9EC00E5C4A1 /* Assets.xcassets */; };
 		AE79D7B62729A9EC00E5C4A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE79D7B42729A9EC00E5C4A1 /* LaunchScreen.storyboard */; };
+		AE79D7BE2729B28900E5C4A1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D7BD2729B28900E5C4A1 /* MainTabBarController.swift */; };
+		AE79D7C22729B3D300E5C4A1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D7C12729B3D300E5C4A1 /* MenuViewController.swift */; };
+		AE79D7C42729CC1500E5C4A1 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D7C32729CC1500E5C4A1 /* ContactViewController.swift */; };
+		AE79D7C62729CC2300E5C4A1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D7C52729CC2300E5C4A1 /* ProfileViewController.swift */; };
+		AE79D7C82729CC5C00E5C4A1 /* ShoppingBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D7C72729CC5C00E5C4A1 /* ShoppingBagViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31A02591D4CC404837A96D35 /* Pods-Pizza(Job).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizza(Job).debug.xcconfig"; path = "Target Support Files/Pods-Pizza(Job)/Pods-Pizza(Job).debug.xcconfig"; sourceTree = "<group>"; };
+		52700D750D7CE443F539488B /* Pods_Pizza_Job_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pizza_Job_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE79D7A62729A9EA00E5C4A1 /* Pizza(Job).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pizza(Job).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE79D7A92729A9EA00E5C4A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE79D7AB2729A9EA00E5C4A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +32,12 @@
 		AE79D7B22729A9EC00E5C4A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE79D7B52729A9EC00E5C4A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE79D7B72729A9EC00E5C4A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE79D7BD2729B28900E5C4A1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		AE79D7C12729B3D300E5C4A1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		AE79D7C32729CC1500E5C4A1 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		AE79D7C52729CC2300E5C4A1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AE79D7C72729CC5C00E5C4A1 /* ShoppingBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagViewController.swift; sourceTree = "<group>"; };
+		BD1855FA9464BBC19466C57B /* Pods-Pizza(Job).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizza(Job).release.xcconfig"; path = "Target Support Files/Pods-Pizza(Job)/Pods-Pizza(Job).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A6C444193F004575BD5655 /* Pods_Pizza_Job_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D9A1B95D7E0CE494180EE4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52700D750D7CE443F539488B /* Pods_Pizza_Job_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACA2165D32B69AE70ECAEB67 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31A02591D4CC404837A96D35 /* Pods-Pizza(Job).debug.xcconfig */,
+				BD1855FA9464BBC19466C57B /* Pods-Pizza(Job).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AE79D79D2729A9EA00E5C4A1 = {
 			isa = PBXGroup;
 			children = (
 				AE79D7A82729A9EA00E5C4A1 /* Pizza(Job) */,
 				AE79D7A72729A9EA00E5C4A1 /* Products */,
+				ACA2165D32B69AE70ECAEB67 /* Pods */,
+				2D9A1B95D7E0CE494180EE4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +93,33 @@
 				AE79D7A92729A9EA00E5C4A1 /* AppDelegate.swift */,
 				AE79D7AB2729A9EA00E5C4A1 /* SceneDelegate.swift */,
 				AE79D7AD2729A9EA00E5C4A1 /* ViewController.swift */,
+				AE79D7C02729B37700E5C4A1 /* View */,
+				AE79D7BF2729B36B00E5C4A1 /* Model */,
 				AE79D7AF2729A9EA00E5C4A1 /* Main.storyboard */,
 				AE79D7B22729A9EC00E5C4A1 /* Assets.xcassets */,
 				AE79D7B42729A9EC00E5C4A1 /* LaunchScreen.storyboard */,
 				AE79D7B72729A9EC00E5C4A1 /* Info.plist */,
 			);
 			path = "Pizza(Job)";
+			sourceTree = "<group>";
+		};
+		AE79D7BF2729B36B00E5C4A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE79D7C02729B37700E5C4A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE79D7BD2729B28900E5C4A1 /* MainTabBarController.swift */,
+				AE79D7C12729B3D300E5C4A1 /* MenuViewController.swift */,
+				AE79D7C32729CC1500E5C4A1 /* ContactViewController.swift */,
+				AE79D7C52729CC2300E5C4A1 /* ProfileViewController.swift */,
+				AE79D7C72729CC5C00E5C4A1 /* ShoppingBagViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +129,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE79D7BA2729A9EC00E5C4A1 /* Build configuration list for PBXNativeTarget "Pizza(Job)" */;
 			buildPhases = (
+				DE3A13E22E42A1B9EC7389A0 /* [CP] Check Pods Manifest.lock */,
 				AE79D7A22729A9EA00E5C4A1 /* Sources */,
 				AE79D7A32729A9EA00E5C4A1 /* Frameworks */,
 				AE79D7A42729A9EA00E5C4A1 /* Resources */,
+				C498A09D7A563C92E7881BDA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +190,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C498A09D7A563C92E7881BDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pizza(Job)/Pods-Pizza(Job)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pizza(Job)/Pods-Pizza(Job)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pizza(Job)/Pods-Pizza(Job)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE3A13E22E42A1B9EC7389A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pizza(Job)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AE79D7A22729A9EA00E5C4A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AE79D7AE2729A9EA00E5C4A1 /* ViewController.swift in Sources */,
+				AE79D7C22729B3D300E5C4A1 /* MenuViewController.swift in Sources */,
 				AE79D7AA2729A9EA00E5C4A1 /* AppDelegate.swift in Sources */,
+				AE79D7C82729CC5C00E5C4A1 /* ShoppingBagViewController.swift in Sources */,
+				AE79D7BE2729B28900E5C4A1 /* MainTabBarController.swift in Sources */,
+				AE79D7C62729CC2300E5C4A1 /* ProfileViewController.swift in Sources */,
 				AE79D7AC2729A9EA00E5C4A1 /* SceneDelegate.swift in Sources */,
+				AE79D7C42729CC1500E5C4A1 /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +388,7 @@
 		};
 		AE79D7BB2729A9EC00E5C4A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31A02591D4CC404837A96D35 /* Pods-Pizza(Job).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,7 +399,6 @@
 				INFOPLIST_FILE = "Pizza(Job)/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,6 +416,7 @@
 		};
 		AE79D7BC2729A9EC00E5C4A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD1855FA9464BBC19466C57B /* Pods-Pizza(Job).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,7 +427,6 @@
 				INFOPLIST_FILE = "Pizza(Job)/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
