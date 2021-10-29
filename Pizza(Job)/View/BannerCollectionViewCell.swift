@@ -9,7 +9,7 @@ import UIKit
 
 class BannerCollectionViewCell: UICollectionViewCell {
     
-    var data:bannerInfo? {
+    var data: bannerInfo? {
         didSet {
             guard let data = data else { return }
             bigImageView.image = data.image
@@ -22,6 +22,7 @@ class BannerCollectionViewCell: UICollectionViewCell {
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.layer.cornerRadius = 10
+        
         return iv
     }()
     

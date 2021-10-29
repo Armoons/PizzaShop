@@ -10,11 +10,6 @@ import UIKit
 
 class MenuView: UIViewController {
     
-    let bannerArray = [
-        bannerInfo(title: "Sale30%", image: UIImage(named: "Banner1")! ),
-        bannerInfo(title: "Sale30%", image: UIImage(named: "Banner1")! )
-    ]
-    
     private let cityName: UILabel = {
         let city = UILabel()
         city.text = "Москва"
@@ -32,13 +27,24 @@ class MenuView: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.backgroundColor = Colors.menuBackground
         return collection
     }()
     
     
+    private let categoryCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.backgroundColor = Colors.menuBackground
+        collection.layer.cornerRadius = 15
+        return collection
+    }()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = Colors.menuBackground
         setupConstraints()
         
     }
@@ -47,9 +53,14 @@ class MenuView: UIViewController {
         
         bannerCollectionView.delegate = self
         bannerCollectionView.dataSource = self
-        bannerCollectionView.register(BannerCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        bannerCollectionView.register(BannerCollectionViewCell.self, forCellWithReuseIdentifier: cellsID.bannerCV)
         
-        for subview in [cityName, dropDownImage, bannerCollectionView] {
+        categoryCollectionView.delegate = self
+        categoryCollectionView.dataSource = self
+        categoryCollectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: cellsID.categoryCV)
+
+        
+        for subview in [cityName, dropDownImage, bannerCollectionView, categoryCollectionView] {
             view.addSubview(subview)
         }
                 
@@ -69,31 +80,68 @@ class MenuView: UIViewController {
             $0.left.equalToSuperview().inset(16)
             $0.right.equalToSuperview().inset(0)
             $0.height.equalTo(112)
+            $0.width.equalTo(300)
+            
+        }
+        
+        categoryCollectionView.snp.makeConstraints{
+            $0.top.equalTo(bannerCollectionView.snp.bottom).offset(24)
+            $0.left.equalToSuperview().inset(16)
+            $0.right.equalToSuperview().inset(0)
+            $0.height.equalTo(32)
+            $0.width.equalTo(88)
+
+
         }
         
     }
-    
-    
 }
 
 extension MenuView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: 112)
+        
+        switch collectionView {
+        case self.bannerCollectionView:
+            return CGSize(width: 300, height: 112)
+            
+        case self.categoryCollectionView:
+            return CGSize(width: 88, height: 32)
+
+        default:
+            return CGSize(width: 0, height: 0)
+
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return bannerArray.count
+        switch collectionView {
+        case self.bannerCollectionView:
+            return bannerArray.count
+            
+        case self.categoryCollectionView:
+            return categoryArray.count
+            
+        default:
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! BannerCollectionViewCell
-        cell.data = bannerArray[indexPath.row]
-//        cell.contentView.backgroundColor = .gray
-        
-        return cell
+        switch collectionView {
+        case self.bannerCollectionView:
+            let cellBanner = collectionView.dequeueReusableCell(withReuseIdentifier: cellsID.bannerCV, for: indexPath) as! BannerCollectionViewCell
+            cellBanner.data = bannerArray[indexPath.row]
+            return cellBanner
+            
+        case self.categoryCollectionView:
+            let cellCategory = collectionView.dequeueReusableCell(withReuseIdentifier: cellsID.categoryCV, for: indexPath) as! CategoryCollectionViewCell
+            cellCategory.data = categoryArray[indexPath.row]
+            return cellCategory
+            
+        default:
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        }
     }
-    
-    
 }
 
