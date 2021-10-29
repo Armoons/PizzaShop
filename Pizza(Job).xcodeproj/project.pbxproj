@@ -19,6 +19,10 @@
 		AE79D7C42729CC1500E5C4A1 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D7C32729CC1500E5C4A1 /* ContactViewController.swift */; };
 		AE79D7C62729CC2300E5C4A1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D7C52729CC2300E5C4A1 /* ProfileViewController.swift */; };
 		AE79D7C82729CC5C00E5C4A1 /* ShoppingBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D7C72729CC5C00E5C4A1 /* ShoppingBagViewController.swift */; };
+		AE79D7CB2729F4F700E5C4A1 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D7CA2729F4F700E5C4A1 /* MenuView.swift */; };
+		AE79D7CF2729FB1D00E5C4A1 /* SFUIDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE79D7CE2729FB1D00E5C4A1 /* SFUIDisplay-Regular.ttf */; };
+		AE79D7D12729FB8E00E5C4A1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79D7D02729FB8E00E5C4A1 /* Model.swift */; };
+		AEF20448272C0AED00CB657A /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF20447272C0AED00CB657A /* BannerCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		AE79D7C32729CC1500E5C4A1 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		AE79D7C52729CC2300E5C4A1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AE79D7C72729CC5C00E5C4A1 /* ShoppingBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagViewController.swift; sourceTree = "<group>"; };
+		AE79D7CA2729F4F700E5C4A1 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		AE79D7CE2729FB1D00E5C4A1 /* SFUIDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		AE79D7D02729FB8E00E5C4A1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		AEF20447272C0AED00CB657A /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD1855FA9464BBC19466C57B /* Pods-Pizza(Job).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizza(Job).release.xcconfig"; path = "Target Support Files/Pods-Pizza(Job)/Pods-Pizza(Job).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,9 +101,11 @@
 				AE79D7A92729A9EA00E5C4A1 /* AppDelegate.swift */,
 				AE79D7AB2729A9EA00E5C4A1 /* SceneDelegate.swift */,
 				AE79D7AD2729A9EA00E5C4A1 /* ViewController.swift */,
+				AE79D7C92729ED2D00E5C4A1 /* Controller */,
 				AE79D7C02729B37700E5C4A1 /* View */,
 				AE79D7BF2729B36B00E5C4A1 /* Model */,
 				AE79D7AF2729A9EA00E5C4A1 /* Main.storyboard */,
+				AE79D7CC2729FA6B00E5C4A1 /* Resources */,
 				AE79D7B22729A9EC00E5C4A1 /* Assets.xcassets */,
 				AE79D7B42729A9EC00E5C4A1 /* LaunchScreen.storyboard */,
 				AE79D7B72729A9EC00E5C4A1 /* Info.plist */,
@@ -106,6 +116,7 @@
 		AE79D7BF2729B36B00E5C4A1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE79D7D02729FB8E00E5C4A1 /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,13 +124,38 @@
 		AE79D7C02729B37700E5C4A1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AE79D7BD2729B28900E5C4A1 /* MainTabBarController.swift */,
+				AE79D7CA2729F4F700E5C4A1 /* MenuView.swift */,
+				AEF20447272C0AED00CB657A /* BannerCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE79D7C92729ED2D00E5C4A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				AE79D7C12729B3D300E5C4A1 /* MenuViewController.swift */,
+				AE79D7BD2729B28900E5C4A1 /* MainTabBarController.swift */,
 				AE79D7C32729CC1500E5C4A1 /* ContactViewController.swift */,
 				AE79D7C52729CC2300E5C4A1 /* ProfileViewController.swift */,
 				AE79D7C72729CC5C00E5C4A1 /* ShoppingBagViewController.swift */,
 			);
-			path = View;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AE79D7CC2729FA6B00E5C4A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE79D7CD2729FA8400E5C4A1 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AE79D7CD2729FA8400E5C4A1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AE79D7CE2729FB1D00E5C4A1 /* SFUIDisplay-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +221,7 @@
 				AE79D7B62729A9EC00E5C4A1 /* LaunchScreen.storyboard in Resources */,
 				AE79D7B32729A9EC00E5C4A1 /* Assets.xcassets in Resources */,
 				AE79D7B12729A9EA00E5C4A1 /* Main.storyboard in Resources */,
+				AE79D7CF2729FB1D00E5C4A1 /* SFUIDisplay-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,9 +275,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE79D7AE2729A9EA00E5C4A1 /* ViewController.swift in Sources */,
+				AEF20448272C0AED00CB657A /* BannerCollectionViewCell.swift in Sources */,
 				AE79D7C22729B3D300E5C4A1 /* MenuViewController.swift in Sources */,
 				AE79D7AA2729A9EA00E5C4A1 /* AppDelegate.swift in Sources */,
 				AE79D7C82729CC5C00E5C4A1 /* ShoppingBagViewController.swift in Sources */,
+				AE79D7CB2729F4F700E5C4A1 /* MenuView.swift in Sources */,
+				AE79D7D12729FB8E00E5C4A1 /* Model.swift in Sources */,
 				AE79D7BE2729B28900E5C4A1 /* MainTabBarController.swift in Sources */,
 				AE79D7C62729CC2300E5C4A1 /* ProfileViewController.swift in Sources */,
 				AE79D7AC2729A9EA00E5C4A1 /* SceneDelegate.swift in Sources */,

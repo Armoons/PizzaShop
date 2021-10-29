@@ -26,7 +26,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         guard let profileImage: UIImage = UIImage(named: "ProfileIcon") else { return }
         guard let bagImage: UIImage = UIImage(named: "BagIcon") else { return }
         
-        let menuController = createNavigationVC(vc:MenuViewController(), itemImage: menuImage, title: "Меню")
+        let menuController = createNavigationVC(vc:MenuView(), itemImage: menuImage, title: "Меню")
         let contactController = createNavigationVC(vc:ContactViewController(), itemImage: locationImage, title: "Контакты")
         let profileController = createNavigationVC(vc:ProfileViewController(), itemImage: profileImage, title: "Профиль")
         let shoppingBagController = createNavigationVC(vc:ShoppingBagViewController(), itemImage: bagImage, title: "Корзина")
