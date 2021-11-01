@@ -9,7 +9,7 @@ import UIKit
 
 class BannerCollectionViewCell: UICollectionViewCell {
     
-    var data: bannerInfo? {
+    var data: BannerInfo? {
         didSet {
             guard let data = data else { return }
             bigImageView.image = data.image

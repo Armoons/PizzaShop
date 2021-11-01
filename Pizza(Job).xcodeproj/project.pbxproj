@@ -26,6 +26,7 @@
 		AEF2044A272C331A00CB657A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF20449272C331A00CB657A /* CategoryCollectionViewCell.swift */; };
 		AEF2044D272C4C1300CB657A /* SFUIDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEF2044C272C395A00CB657A /* SFUIDisplay-Bold.ttf */; };
 		AEF2044E272C4C1500CB657A /* SFUIDisplay-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEF2044B272C395A00CB657A /* SFUIDisplay-Light.ttf */; };
+		AEF20452272C788C00CB657A /* GoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF20451272C788C00CB657A /* GoodsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		AEF20449272C331A00CB657A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		AEF2044B272C395A00CB657A /* SFUIDisplay-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIDisplay-Light.ttf"; sourceTree = "<group>"; };
 		AEF2044C272C395A00CB657A /* SFUIDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		AEF20451272C788C00CB657A /* GoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD1855FA9464BBC19466C57B /* Pods-Pizza(Job).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizza(Job).release.xcconfig"; path = "Target Support Files/Pods-Pizza(Job)/Pods-Pizza(Job).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 				AE79D7CA2729F4F700E5C4A1 /* MenuView.swift */,
 				AEF20447272C0AED00CB657A /* BannerCollectionViewCell.swift */,
 				AEF20449272C331A00CB657A /* CategoryCollectionViewCell.swift */,
+				AEF20451272C788C00CB657A /* GoodsCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			files = (
 				AE79D7AE2729A9EA00E5C4A1 /* ViewController.swift in Sources */,
 				AEF20448272C0AED00CB657A /* BannerCollectionViewCell.swift in Sources */,
+				AEF20452272C788C00CB657A /* GoodsCollectionViewCell.swift in Sources */,
 				AE79D7C22729B3D300E5C4A1 /* MenuViewController.swift in Sources */,
 				AE79D7AA2729A9EA00E5C4A1 /* AppDelegate.swift in Sources */,
 				AEF2044A272C331A00CB657A /* CategoryCollectionViewCell.swift in Sources */,

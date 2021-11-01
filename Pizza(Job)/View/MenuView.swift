@@ -28,6 +28,7 @@ class MenuView: UIViewController {
         layout.scrollDirection = .horizontal
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.backgroundColor = Colors.menuBackground
+        collection.showsHorizontalScrollIndicator = false
         return collection
     }()
     
@@ -38,6 +39,16 @@ class MenuView: UIViewController {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.backgroundColor = Colors.menuBackground
         collection.layer.cornerRadius = 15
+        collection.showsHorizontalScrollIndicator = false
+        return collection
+    }()
+    
+    private let goodsCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.backgroundColor = .white
+        collection.layer.cornerRadius = 20
         return collection
     }()
 
@@ -47,7 +58,26 @@ class MenuView: UIViewController {
         view.backgroundColor = Colors.menuBackground
         setupConstraints()
         
+//        setupJSON()
+        
     }
+    
+//    func setupJSON() {
+//        let urlString = "https://dodopizza.ru/moscow?utm_source=google&utm_medium=cpc&utm_campaign=arwm%20/%20Do%20/%20Search%20/%20Конверсии%20/%20Целевые%20запросы%20/&utm_term=пицца%20заказать%7Cmt:p&utm_content=astat:kwd-299857069885%7Cret:kwd-299857069885%7Ccid:12416882103%7Cgid:119027504100%7Caid:500740526079%7Cpos:%7Cst:%7Csrc:%7Cdvc:c%7Creg:9047027&gclid=Cj0KCQjwt-6LBhDlARIsAIPRQcJjhn_rxUinrttXmImafM2T7XoCd2cVFS8RL69l-VY5UFyWwZLxZAkaArIPEALw_wcB"
+//        guard let url = URL(string: urlString) else { return }
+//
+//        URLSession.shared.dataTask(with: url) { data, response, error in
+//            if let error = error {
+//                print(error)
+//                return
+//            }
+//
+//            guard let data = data else { return }
+//
+//            let jsonString = String(data: data, encoding: .utf8)
+//            print(jsonString)
+//        }.resume()
+//    }
     
     func setupConstraints() {
         
@@ -58,16 +88,23 @@ class MenuView: UIViewController {
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
         categoryCollectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: cellsID.categoryCV)
+        
+        bannerCollectionView.delegate = self
+        bannerCollectionView.dataSource = self
+        bannerCollectionView.register(BannerCollectionViewCell.self, forCellWithReuseIdentifier: cellsID.bannerCV)
+
+        goodsCollectionView.delegate = self
+        goodsCollectionView.dataSource = self
+        goodsCollectionView.register(GoodsCollectionViewCell.self, forCellWithReuseIdentifier: cellsID.goodsCV)
 
         
-        for subview in [cityName, dropDownImage, bannerCollectionView, categoryCollectionView] {
+        for subview in [cityName, dropDownImage, bannerCollectionView, categoryCollectionView, goodsCollectionView] {
             view.addSubview(subview)
         }
                 
         cityName.snp.makeConstraints{
             $0.top.equalToSuperview().inset(60)
             $0.left.equalToSuperview().inset(16)
-            
         }
         
         dropDownImage.snp.makeConstraints{
@@ -90,8 +127,12 @@ class MenuView: UIViewController {
             $0.right.equalToSuperview().inset(0)
             $0.height.equalTo(32)
             $0.width.equalTo(88)
-
-
+        }
+        
+        goodsCollectionView.snp.makeConstraints{
+            $0.left.right.equalToSuperview()
+            $0.top.equalTo(categoryCollectionView.snp.bottom).offset(24)
+            $0.bottom.equalToSuperview()
         }
         
     }
@@ -107,6 +148,9 @@ extension MenuView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
             
         case self.categoryCollectionView:
             return CGSize(width: 88, height: 32)
+            
+        case self.goodsCollectionView:
+            return CGSize(width: view.frame.width, height: 172)
 
         default:
             return CGSize(width: 0, height: 0)
@@ -121,6 +165,9 @@ extension MenuView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
             
         case self.categoryCollectionView:
             return categoryArray.count
+            
+        case self.goodsCollectionView:
+            return 3
             
         default:
             return 0
@@ -138,6 +185,11 @@ extension MenuView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
             let cellCategory = collectionView.dequeueReusableCell(withReuseIdentifier: cellsID.categoryCV, for: indexPath) as! CategoryCollectionViewCell
             cellCategory.data = categoryArray[indexPath.row]
             return cellCategory
+        
+        case self.goodsCollectionView:
+            let cellGoods = collectionView.dequeueReusableCell(withReuseIdentifier: cellsID.goodsCV, for: indexPath) as! GoodsCollectionViewCell
+            cellGoods.data = goodsArray[indexPath.row]
+            return cellGoods
             
         default:
             return collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
