@@ -47,13 +47,15 @@ class GoodsCollectionViewCell: UICollectionViewCell {
         label.layer.borderColor = Colors.pink.cgColor
         label.textAlignment = .center
         label.layer.borderWidth = 1
-        label.layer.cornerRadius = 16
+        label.layer.cornerRadius = 12
         return label
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        self.backgroundColor = .white
+        self.layer.borderWidth = 1
+        self.layer.borderColor = Colors.menuBackground.cgColor
         setupConstraints()
         
         
@@ -91,6 +93,7 @@ class GoodsCollectionViewCell: UICollectionViewCell {
         priceLabel.snp.makeConstraints{
             $0.top.equalTo(descriptionLabel.snp.bottom).offset(16)
             $0.right.equalToSuperview().inset(24)
+            $0.bottom.lessThanOrEqualTo(-10)
             $0.width.equalTo(87)
             $0.height.equalTo(32)
         }

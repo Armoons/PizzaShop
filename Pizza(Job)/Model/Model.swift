@@ -31,9 +31,11 @@ struct GoodsInfo {
 }
 
 let goodsArray = [
-    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы", description: "бабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааб", price: "345"),
-    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы", description: "бабабаббааб", price: "345"),
-    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы", description: "бабабаббааб", price: "345")
+    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы1", description: "бабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааб", price: "345"),
+    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы2", description: "бабабаббааб", price: "345"),
+    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы3", description: "бабабаббааб", price: "345"),
+    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы4", description: "бабабаббааб", price: "345")
+
 ]
 
 public struct cellsID {

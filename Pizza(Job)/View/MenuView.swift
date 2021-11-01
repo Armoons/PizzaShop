@@ -46,9 +46,14 @@ class MenuView: UIViewController {
     private let goodsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collection.backgroundColor = .white
+        collection.backgroundColor = Colors.menuBackground
+        
         collection.layer.cornerRadius = 20
+        collection.showsVerticalScrollIndicator = false
         return collection
     }()
 
@@ -61,6 +66,8 @@ class MenuView: UIViewController {
 //        setupJSON()
         
     }
+    
+   
     
 //    func setupJSON() {
 //        let urlString = "https://dodopizza.ru/moscow?utm_source=google&utm_medium=cpc&utm_campaign=arwm%20/%20Do%20/%20Search%20/%20Конверсии%20/%20Целевые%20запросы%20/&utm_term=пицца%20заказать%7Cmt:p&utm_content=astat:kwd-299857069885%7Cret:kwd-299857069885%7Ccid:12416882103%7Cgid:119027504100%7Caid:500740526079%7Cpos:%7Cst:%7Csrc:%7Cdvc:c%7Creg:9047027&gclid=Cj0KCQjwt-6LBhDlARIsAIPRQcJjhn_rxUinrttXmImafM2T7XoCd2cVFS8RL69l-VY5UFyWwZLxZAkaArIPEALw_wcB"
@@ -167,8 +174,7 @@ extension MenuView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
             return categoryArray.count
             
         case self.goodsCollectionView:
-            return 3
-            
+            return goodsArray.count
         default:
             return 0
         }
@@ -189,6 +195,10 @@ extension MenuView: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         case self.goodsCollectionView:
             let cellGoods = collectionView.dequeueReusableCell(withReuseIdentifier: cellsID.goodsCV, for: indexPath) as! GoodsCollectionViewCell
             cellGoods.data = goodsArray[indexPath.row]
+//            if indexPath.row != 0 {
+//                cellGoods.layer.borderWidth = 1
+//                cellGoods.layer.borderColor = Colors.menuBackground.cgColor
+//            }
             return cellGoods
             
         default:
