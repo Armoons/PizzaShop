@@ -39,9 +39,9 @@ let goodsArray = [
 ]
 
 public struct cellsID {
-    static let bannerCV = "bannerCollectionView"
-    static let categoryCV = "categoryCollectionView"
-    static let goodsCV = "goodsCollectionView"
+    static let bannerCC = "bannerCollectionCell"
+    static let categoryCC = "categoryCollectionCell"
+    static let goodsTC = "goodsTableCell"
     
 }
 

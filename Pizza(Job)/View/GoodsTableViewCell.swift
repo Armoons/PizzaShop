@@ -1,25 +1,26 @@
 //
-//  GoodsCollectionViewCell.swift
+//  GoodsTableViewCell.swift
 //  Pizza(Job)
 //
-//  Created by Stepanyan Arman  on 29.10.2021.
+//  Created by Stepanyan Arman  on 12.12.2021.
 //
 
+import Foundation
 import UIKit
 
-class GoodsCollectionViewCell: UICollectionViewCell {
+class GoodsTableViewCell: UITableViewCell {
     
     var data: GoodsInfo? {
         didSet {
             guard let data = data else { return }
-            imageView.image = data.image
+            imageV.image = data.image
             nameLabel.text = data.name
             descriptionLabel.text = data.description
             priceLabel.text = "от \(data.price) р"
         }
     }
     
-    let imageView: UIImageView = {
+    let imageV: UIImageView = {
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.contentMode = .scaleAspectFill
@@ -51,15 +52,21 @@ class GoodsCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = .white
-        self.layer.borderWidth = 1
-        self.layer.borderColor = Colors.menuBackground.cgColor
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         setupConstraints()
-        
-        
     }
+    
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        self.backgroundColor = .white
+//        self.layer.borderWidth = 1
+//        self.layer.borderColor = Colors.menuBackground.cgColor
+//        setupConstraints()
+//
+//
+//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -67,21 +74,20 @@ class GoodsCollectionViewCell: UICollectionViewCell {
     
     func setupConstraints() {
         
-        for view in [imageView, nameLabel, descriptionLabel, priceLabel] {
+        for view in [imageV, nameLabel, descriptionLabel, priceLabel] {
             contentView.addSubview(view)
         }
         
-        imageView.snp.makeConstraints{
+        imageV.snp.makeConstraints{
             $0.left.top.bottom.equalToSuperview().inset(16)
             $0.centerY.equalToSuperview()
-//            $0.top.bottom.equalToSuperview().inset(24)
-            $0.width.equalTo(imageView.snp.height).multipliedBy(1.0 / 1.0)
+            $0.width.equalTo(imageV.snp.height).multipliedBy(1.0 / 1.0)
         }
         
         nameLabel.snp.makeConstraints{
             $0.right.greaterThanOrEqualTo(10)
-            $0.top.equalTo(imageView.snp.top)
-            $0.left.equalTo(imageView.snp.right).offset(32)
+            $0.top.equalTo(imageV.snp.top)
+            $0.left.equalTo(imageV.snp.right).offset(32)
         }
         
         descriptionLabel.snp.makeConstraints{
