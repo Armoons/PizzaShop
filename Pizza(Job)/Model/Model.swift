@@ -30,18 +30,23 @@ struct GoodsInfo {
     var price: String
 }
 
-let goodsArray = [
-    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы1", description: "бабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааб", price: "345"),
-    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы2", description: "бабабаббааб", price: "345"),
-    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы3", description: "бабабаббааб", price: "345"),
-    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы4", description: "бабабаббааб", price: "345")
-
-]
+//let goodsArray = [
+//    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы1", description: "бабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааб", price: "345"),
+//    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы2", description: "бабабаббааб", price: "345"),
+//    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы3", description: "бабабаббааб", price: "345"),
+//    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы4", description: "бабабаббааб", price: "345"),
+//    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы1", description: "бабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааб", price: "345"),
+//    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы1", description: "бабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааб", price: "345"),
+//    GoodsInfo(image: UIImage(named: "Pizza1")!, name: "Ветчина и грибы1", description: "бабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааббабабаббааб", price: "345")
+//
+//]
 
 public struct cellsID {
     static let bannerCC = "bannerCollectionCell"
     static let categoryCC = "categoryCollectionCell"
     static let goodsTC = "goodsTableCell"
+    static let bannerTC = "bannerTableCell"
+
     
 }
 

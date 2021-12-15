@@ -13,14 +13,12 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-//        self.delegate = (self as UITabBarControllerDelegate)
+        self.navigationController?.navigationBar.backgroundColor = .red
         setupTabBar()
     }
     
     func setupTabBar() {
         
-        //        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for: .selected)
-
         guard let menuImage: UIImage = UIImage(named: "MenuIcon") else { return }
         guard let locationImage: UIImage = UIImage(named: "LocationIcon") else { return }
         guard let profileImage: UIImage = UIImage(named: "ProfileIcon") else { return }
@@ -32,7 +30,6 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         let shoppingBagController = createNavigationVC(vc:ShoppingBagViewController(), itemImage: bagImage, title: "Корзина")
         
         viewControllers = [menuController, contactController, profileController, shoppingBagController]
-        
     }
 }
 

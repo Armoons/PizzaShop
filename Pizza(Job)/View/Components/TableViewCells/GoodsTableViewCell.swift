@@ -10,12 +10,11 @@ import UIKit
 
 class GoodsTableViewCell: UITableViewCell {
     
-    var data: GoodsInfo? {
+    var data: GoodsModel? {
         didSet {
             guard let data = data else { return }
-            imageV.image = data.image
             nameLabel.text = data.name
-            descriptionLabel.text = data.description
+            descriptionLabel.text = "AaaaeofioeifoeifAaaaeofioeifoeifAaaaeofioeifoeifAaaaeofioeifoeifAaaaeofioeifoeif"
             priceLabel.text = "от \(data.price) р"
         }
     }
@@ -57,16 +56,6 @@ class GoodsTableViewCell: UITableViewCell {
         
         setupConstraints()
     }
-    
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        self.backgroundColor = .white
-//        self.layer.borderWidth = 1
-//        self.layer.borderColor = Colors.menuBackground.cgColor
-//        setupConstraints()
-//
-//
-//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

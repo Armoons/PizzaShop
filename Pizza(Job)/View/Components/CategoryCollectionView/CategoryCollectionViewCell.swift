@@ -20,7 +20,6 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textColor = Colors.lightPink
         label.font = UIFont(name: Font.sfLight, size: 13)
-//        label.textAlignment = .center
         return label
     }()
     
