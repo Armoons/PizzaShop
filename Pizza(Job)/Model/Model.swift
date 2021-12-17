@@ -66,7 +66,8 @@ let bannerArray = [
 struct Colors {
     static let menuBackground: UIColor = UIColor(red: 243/255, green: 245/255, blue: 249/255, alpha: 1)
     static let pink: UIColor = UIColor(red: 253/255, green: 58/255, blue: 105/255, alpha: 1)
-    static let lightPink: UIColor = UIColor(red: 253/255, green: 58/255, blue: 105/255, alpha: 0.5)
+    static let lightPink: UIColor = UIColor(red: 253/255, green: 58/255, blue: 105/255, alpha: 0.4)
+    static let lighterPink: UIColor = UIColor(red: 253/255, green: 58/255, blue: 105/255, alpha: 0.2)
     static let descriptionText: UIColor = UIColor(red: 170/255, green: 170/255, blue: 173/255, alpha: 1)
 
 }

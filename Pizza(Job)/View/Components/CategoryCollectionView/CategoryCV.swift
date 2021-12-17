@@ -8,7 +8,13 @@
 import Foundation
 import UIKit
 
+protocol CategoryCVDelegate {
+    func didTouchCell()
+}
+
 class CategoryCV: UICollectionView {
+    
+//    var delegate: CategoryCVDelegate?
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         let layout = UICollectionViewFlowLayout()
@@ -23,6 +29,7 @@ class CategoryCV: UICollectionView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     func setup() {
         self.backgroundColor = Colors.menuBackground
         self.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: cellsID.categoryCC)
@@ -34,6 +41,12 @@ class CategoryCV: UICollectionView {
 }
 
 extension CategoryCV: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? CategoryCollectionViewCell {
+            if cell.didSelect { cell.deselectCell() } else { cell.selectCell() }
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 88, height: 32)
